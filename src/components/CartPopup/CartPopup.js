@@ -18,24 +18,22 @@ const CartPopup = ({ clickOnCloseButton }) => {
       <div className="cart-popup-cake-list">
         {!isCartEmpty ? (
           cakeInMyCartArray.map((cake) => (
-            <>
-              <div className="cart-popup-cake">
-                <div className="cart-popup-cake-details">
-                  <div className="cart-popup-cake-image-wrapper">
-                    <img className="cart-popup-cake-image" src={cake.image} />
-                  </div>
-                  <p className="cart-popup-cake-title">{cake.name} </p>
-                  <p>~</p>
-                  <p className="cart-popup-cake-price">₹ {cake.price}</p>
+            <div className="cart-popup-cake" key={cake.id + cake.name}>
+              <div className="cart-popup-cake-details">
+                <div className="cart-popup-cake-image-wrapper">
+                  <img className="cart-popup-cake-image" src={cake.image} />
                 </div>
-                <div
-                  className="cart-popup-delete-icon-wrapper"
-                  onClick={() => removeThisCakeFromMyCart(cake.id)}
-                >
-                  <img className="delete-icon" src={TrashIcon} />
-                </div>
+                <p className="cart-popup-cake-title">{cake.name} </p>
+                <p>~</p>
+                <p className="cart-popup-cake-price">₹ {cake.price}</p>
               </div>
-            </>
+              <div
+                className="cart-popup-delete-icon-wrapper"
+                onClick={() => removeThisCakeFromMyCart(cake.id)}
+              >
+                <img className="delete-icon" src={TrashIcon} />
+              </div>
+            </div>
           ))
         ) : (
           <img src={PartyFaceEmoji} className="party-emoji-face" />
@@ -44,11 +42,8 @@ const CartPopup = ({ clickOnCloseButton }) => {
 
       <p className="total-price">
         {!isCartEmpty
-          ? `Total Price: ₹{" "}
-          ${cakeInMyCartArray.reduce(
-            (result, cake) => cake.price + result,
-            0
-          )}{" "}
+          ? `Total Price: ₹
+          ${cakeInMyCartArray.reduce((result, cake) => cake.price + result, 0)}
           only /- `
           : "Buy Yummy Delicious Cake !"}
       </p>

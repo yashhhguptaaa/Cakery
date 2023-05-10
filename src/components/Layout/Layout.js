@@ -1,11 +1,35 @@
-import "./Layout.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CartPopup from "../CartPopup";
 import CakeLogo1 from "../../assets/cake_logo_1.png";
 import CakeLogo2 from "../../assets/cake_logo_2.png";
 import CakeLogo3 from "../../assets/cake_logo_3.png";
+import ShoppingCartIcon from "../../assets/shopping-cart-icon.png";
+import AdminIcon from "../../assets/admin-icon.png";
+import "./Layout.css";
 
-const Layout = ({ onBack }) => {
+const Layout = () => {
+  const navigate = useNavigate();
+  const [handleCartClick, setHandleCartClick] = useState(false);
+  const clickOnCloseButton = () =>
+    setHandleCartClick((handleCartClick) => !handleCartClick);
   return (
     <div className="container">
+      <div className="cart-admin-icon-wrapper">
+        <div className="cart-icon-wrapper">
+          <img
+            className="cart-icon"
+            src={ShoppingCartIcon}
+            onClick={clickOnCloseButton}
+          />
+          {handleCartClick ? (
+            <CartPopup clickOnCloseButton={clickOnCloseButton} />
+          ) : null}
+        </div>
+        <div className="admin-icon-wrapper" onClick={() => navigate("/admin")}>
+          <img className="admin-icon" src={AdminIcon} />
+        </div>
+      </div>
       <div className="cake-showcase-wrapper">
         <div className="cake-showcase">
           <div className="cake--showcase-logo">
