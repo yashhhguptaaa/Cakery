@@ -1,3 +1,7 @@
+:root {
+  --add-to-card-btn-color: white;
+}
+
 .cake-directory-container {
   display: flex;
   flex-direction: column;
@@ -38,17 +42,25 @@
   width: 30%;
   border-radius: 0.75rem;
   backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.cake-product:hover {
+  --add-to-card-btn-color: hsla(0, 17%, 93%, 0.619);
 }
 
 .cake-image-wrapper {
-  padding: 5px 5px 0px 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 1rem;
+  padding-top: 5px;
+  overflow: hidden;
 }
 
 .cake-image {
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 350px;
   object-fit: cover;
-  border-radius: 0.75rem 0.75rem 0px 0px;
 }
 
 .cake-title {
@@ -82,6 +94,7 @@
   background: white;
   padding: 4px 8px;
   border-radius: 0.25rem;
+  background-color: var(--add-to-card-btn-color);
 }
 
 @media ((min-width: 768px) and (max-width: 1183px)) {
@@ -119,5 +132,11 @@
 
   .cake-directory-container {
     margin-top: 12rem;
+  }
+}
+
+@media (max-width: 347px) {
+  .cake-directory-container {
+    margin-top: 13rem;
   }
 }
