@@ -31,7 +31,7 @@ const Layout = ({ onBack }) => {
             />
           </div>
           <div className="cake-showcase-body">
-            <p className="cake-showcase-title">Cake Class</p>
+            <p className="cake-showcase-title">Classes</p>
             <p className="cake-showcase-description">
               Cake decorating courses available, both online and offline
             </p>
