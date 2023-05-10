@@ -1,0 +1,42 @@
+[
+  {
+    "id": "MangoCake1",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2013/05/easy-lemon-layer-cake-hero-e54adca.jpg?quality=90&webp=true&resize=600,545",
+    "name": "Mango Cake",
+    "description": "This mango cake is bursting with fresh mango flavor! It has surprisingly simple ingredients (ONLY 9 TOTAL!) but it is a show stopper – and truly tastes as good as it looks.",
+    "price": 300,
+    "itemInCart":false
+  },
+  {
+    "id": "ChocolateCake2",
+    "image": "https://cafedelites.com/wp-content/uploads/2020/02/Chocolate-Cake-IMAGE-69.jpg",
+    "name": "Chocolate Cake",
+    "description": "Chocolate flavour oozes all through this cake even though it’s only made with cocoa powder, like our very own Fudgy Chocolate Cake. With a crumb so incredibly tender, this cake stays moist for a good 4-5 days. Whether you eat it plain, dust it with powdered sugar or serve with dollops of cream or scoops of ice cream, it truly is perfectly perfect!",
+    "price": 500,
+    "itemInCart":false
+  },
+  {
+    "id": "BlueberryCake3",
+    "image": "https://www.simplyrecipes.com/thmb/eGrchpO1WNNM6VFPWHeWxU_rPPE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2005__07__blueberry-cake-vertical-b-1200-edddb13348c248f28a6086e47d42d4ff.jpg",
+    "name": "Blueberry Cake",
+    "description": "Have an abundance of blueberries? When they are in season you really have to enjoy them while you can, right? Here is a lovely blueberry cake that makes the most of fresh blueberries (though you can use frozen if you want).In fact, it almost seems like there is more blueberry than cake in this cake; that's a problem I can live with!",
+    "price": 450,
+    "itemInCart":false
+  },
+  {
+    "id": "BlackForestCake4",
+    "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fpublic-assets.meredithcorp.io%2Fd0527125b12d6cee64d260620b3608ce%2F1660327595EFC91AA1-8A68-4A05-8384-D225E04FA22B.jpeg&q=60&c=sc&orient=true&poi=auto&h=512",
+    "name": "Black Forest Cake",
+    "description": "Black forest cake is the perfect amalgamation of chocolate, whipped cream frosting and cherry liqueur garnished with fresh cherries. It looks decadent and tastes heavenly and that is all one needs for any sweet and joyous celebration.",
+    "price": 550,
+    "itemInCart":false
+  },
+  {
+    "id": "FruitCake5",
+    "image": "https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AA.jpg?tr=w-100,h-100,dpr-2,q-70",
+    "name": "Fruit Cake",
+    "description": "Most fruitcake bakers purchase fruit and nuts from specialty manufacturers or suppliers. The batter is poured into cake pans and baked slowly. which rum and brandy are the most popular. The cake itself is made of high-quality flour, salt, baking powder, brown sugar, and butter.",
+    "price": 699,
+    "itemInCart":false
+  }
+]
