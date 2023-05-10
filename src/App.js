@@ -10,16 +10,16 @@ const CakePage = lazy(() => import("./pages/CakePage"));
 function App() {
   return (
     <div className="App">
-      <Layout />
-      <Suspense fallback={<span>Loading...</span>}>
-        <Router>
+      <Router>
+        <Layout />
+        <Suspense fallback={<span>Loading...</span>}>
           <Routes>
             <Route path="/" element={<CakeDirectory />} />
             <Route path="/admin" element={<AdminControl />} />
             <Route path="/cake/:cakeId" element={<CakePage />} />
           </Routes>
-        </Router>
-      </Suspense>
+        </Suspense>
+      </Router>
     </div>
   );
 }

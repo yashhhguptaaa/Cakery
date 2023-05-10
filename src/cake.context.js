@@ -55,15 +55,14 @@ const CakeryDataProvider = ({ children }) => {
   };
 
   const checkoutCakeItems = () => {
-    const checkoutString = `
-            Thanks for buying from Cakery 😊
+    const checkoutString = `Thanks for buying from Cakery 😊
         ${addToCartItems
           .map(({ name, price }) => `${name}: ₹ ${price}`)
           .join("\n")}
-        Total Bill: ₹ ${addToCartItems.reduce(
-          (sum, item) => sum + item.price,
-          0
-        )}
+          Total Bill: ₹ ${addToCartItems.reduce(
+            (sum, item) => sum + item.price,
+            0
+          )}
     `;
     console.log(checkoutString);
 
@@ -73,7 +72,6 @@ const CakeryDataProvider = ({ children }) => {
     );
     setCakeData([...filteredData]);
   };
-
   const fetchCakeThroughCakeId = (cakeId) => {
     const filterMyCake = cakeData.filter((cake) => cake.id === cakeId);
     return filterMyCake[0];
@@ -83,7 +81,7 @@ const CakeryDataProvider = ({ children }) => {
     <CakeryDataContext.Provider
       value={{
         cakeDataArray: cakeData,
-        cakeInMyCart: addToCartItems,
+        cakeInMyCartArray: addToCartItems,
         addNewCakeInCakery: addNewCakeProduct,
         deleteCakeFromCakery: deleteCakeProduct,
         addThisCakeToMyCart: addToCart,
