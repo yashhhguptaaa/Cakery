@@ -1,0 +1,10 @@
+.container {
+    height: 150px;
+    background-color: rgb(255, 243, 218);
+}
+
+.cake-logo-wrapper {
+    background-color: white;
+    width: 80%;
+    margin-inline: auto;
+}
