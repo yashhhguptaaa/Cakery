@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.cake-product:hover {
+.cake-product-wrapper:hover {
   --add-to-card-btn-color: hsla(0, 17%, 93%, 0.619);
 }
 
@@ -89,16 +89,15 @@
 .add-to-cart-btn {
   font-weight: 800;
   color: rgb(228, 6, 6);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  display: inline-block;
   border: 1px solid hsla(0, 4%, 21%, 0.2);
-  bottom: -17px;
-  padding: 4px 8px;
+  bottom: -13px;
+  padding: 2px 4px;
   border-radius: 0.25rem;
   background-color: var(--add-to-card-btn-color);
 }
@@ -108,7 +107,7 @@
     width: 85%;
   }
 
-  .cake-product {
+  .cake-product-wrapper {
     width: 45%;
   }
 }
@@ -118,12 +117,16 @@
     width: 90%;
   }
 
-  .cake-product {
+  .cake-product-wrapper {
     width: 45%;
   }
 
   .cake-directory-container {
     margin-top: 11rem;
+  }
+  .add-to-cart-btn {
+    font-size: 0.75rem;
+    bottom: -10px;
   }
 }
 
@@ -132,7 +135,7 @@
     width: 90%;
   }
 
-  .cake-product {
+  .cake-product-wrapper {
     width: 90%;
   }
 
