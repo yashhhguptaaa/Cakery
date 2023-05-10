@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import "./App.css";
 
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<CakeDirectory />} />
             <Route path="/admin" element={<AdminControl />} />
-            <Route path="/:cakeId" element={<CakePage />} />
+            <Route path="/cake/:cakeId" element={<CakePage />} />
           </Routes>
         </Router>
       </Suspense>
