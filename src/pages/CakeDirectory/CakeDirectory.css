@@ -34,12 +34,16 @@
   row-gap: 2rem;
 }
 
+.cake-product-wrapper {
+  position: relative;
+  width: 30%;
+}
+
 .cake-product {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 30%;
   border-radius: 0.75rem;
   backdrop-filter: blur(10px);
   cursor: pointer;
@@ -59,7 +63,7 @@
 
 .cake-image {
   height: 400px;
-  width: 350px;
+  width: 400px;
   object-fit: cover;
 }
 
@@ -85,13 +89,15 @@
 .add-to-cart-btn {
   font-weight: 800;
   color: rgb(228, 6, 6);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
   position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  display: inline-block;
   border: 1px solid hsla(0, 4%, 21%, 0.2);
   bottom: -17px;
-  background: white;
   padding: 4px 8px;
   border-radius: 0.25rem;
   background-color: var(--add-to-card-btn-color);

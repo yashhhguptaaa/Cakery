@@ -22,16 +22,17 @@ const CakeDirectory = () => {
       <div className="cake-directory-products">
         {cakeDataArray.length
           ? cakeDataArray.map((cake) => (
-              <div
-                className={classNames("glass", "cake-product")}
-                key={cake.id}
-                onClick={() => navigate(`/cake/${cake.id}`)}
-              >
-                <div className="cake-image-wrapper">
-                  <img src={cake.image} className="cake-image" />
+              <div className="cake-product-wrapper" key={cake.id}>
+                <div
+                  className={classNames("glass", "cake-product")}
+                  onClick={() => navigate(`/cake/${cake.id}`)}
+                >
+                  <div className="cake-image-wrapper">
+                    <img src={cake.image} className="cake-image" />
+                  </div>
+                  <p className="cake-title">{cake.name}</p>
+                  <p className="cake-price">₹ {cake.price}</p>
                 </div>
-                <p className="cake-title">{cake.name}</p>
-                <p className="cake-price">₹ {cake.price}</p>
                 <div
                   className="add-to-cart-btn"
                   onClick={() => {
@@ -42,7 +43,7 @@ const CakeDirectory = () => {
                     }
                   }}
                 >
-                  {cake.itemInCart ? "Remove This From Cart" : "Add To Cart"}
+                  {cake.itemInCart ? "Remove" : "Add To Cart"}
                 </div>
               </div>
             ))
