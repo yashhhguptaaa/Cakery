@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.glass {
+  background: hsla(0, 17%, 93%, 0.619);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(0, 4%, 21%, 0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glass:hover {
+  background: hsla(0, 17%, 93%, 0.419);
+  border: 1px solid hsla(0, 4%, 21%, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
