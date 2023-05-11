@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CakeryDataContext } from "../../cake.context";
 import "./CakePage.css";
