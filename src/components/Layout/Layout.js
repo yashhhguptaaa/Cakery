@@ -6,6 +6,7 @@ import CakeLogo2 from "../../assets/cake_logo_2.png";
 import CakeLogo3 from "../../assets/cake_logo_3.png";
 import ShoppingCartIcon from "../../assets/shopping-cart-icon.png";
 import AdminIcon from "../../assets/admin-icon.png";
+import HomeIcon from "../../assets/home-icon.png";
 import "./Layout.css";
 
 const Layout = () => {
@@ -15,19 +16,27 @@ const Layout = () => {
     setHandleCartClick((handleCartClick) => !handleCartClick);
   return (
     <div className="container">
-      <div className="cart-admin-icon-wrapper">
-        <div className="cart-icon-wrapper">
-          <img
-            className="cart-icon"
-            src={ShoppingCartIcon}
-            onClick={clickOnCloseButton}
-          />
-          {handleCartClick ? (
-            <CartPopup clickOnCloseButton={clickOnCloseButton} />
-          ) : null}
+      <div className="cart-admin-icon-home-wrapper">
+        <div className="home-wrapper" onClick={() => navigate("/")}>
+          <img src={HomeIcon} className="home-icon" />
         </div>
-        <div className="admin-icon-wrapper" onClick={() => navigate("/admin")}>
-          <img className="admin-icon" src={AdminIcon} />
+        <div className="cart-admin-icon-wrapper">
+          <div className="cart-icon-wrapper">
+            <img
+              className="cart-icon"
+              src={ShoppingCartIcon}
+              onClick={clickOnCloseButton}
+            />
+            {handleCartClick ? (
+              <CartPopup clickOnCloseButton={clickOnCloseButton} />
+            ) : null}
+          </div>
+          <div
+            className="admin-icon-wrapper"
+            onClick={() => navigate("/admin")}
+          >
+            <img className="admin-icon" src={AdminIcon} />
+          </div>
         </div>
       </div>
       <div className="cake-showcase-wrapper">

@@ -4,12 +4,18 @@
   position: relative;
 }
 
+.cart-admin-icon-home-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0 1rem;
+  width: 100%;
+}
+
 .cart-admin-icon-wrapper {
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
   width: 100%;
-  padding: 2rem 0 0 0;
 }
 
 .cart-icon-wrapper {
@@ -21,7 +27,8 @@
 }
 
 .cart-icon,
-.admin-icon {
+.admin-icon,
+.home-icon {
   height: 30px;
   width: 30px;
   cursor: pointer;
