@@ -181,3 +181,16 @@
     width: 90%;
   }
 }
+
+@media (max-width: 480px) {
+  .admin-control-all-cakes,
+  .admin-control-add-cake {
+    padding-block: 1rem;
+    font-size: 15px;
+  }
+
+  .all-cakes-cake-price,
+  .all-cakes-cake-title {
+    font-size: 1rem;
+  }
+}

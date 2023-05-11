@@ -55,7 +55,10 @@ const AdminControl = () => {
                 <div className="all-cakes-container">
                   {cakeDataArray.length > 0 ? (
                     cakeDataArray.map((cake) => (
-                      <div className="all-cakes-cake-body">
+                      <div
+                        key={cake.id + cake.name}
+                        className="all-cakes-cake-body"
+                      >
                         <div className="all-cakes-cake-details">
                           <div className="all-cakes-cake-image-wrapper">
                             <img
