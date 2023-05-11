@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { CakeryDataContext } from "../../cake.context";
 import TrashIcon from "../../assets/trash-icon.ico";
@@ -20,6 +21,12 @@ const AdminControl = () => {
   });
   const { cakeDataArray, addNewCakeInCakery, deleteCakeFromCakery } =
     useContext(CakeryDataContext);
+
+  const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    setCakeDetails({ ...cakeDetails, [e.target.name]: e.target.value });
+  };
   return (
     <div className="admin-control-container">
       <div className="admin-control-columns">
@@ -91,26 +98,65 @@ const AdminControl = () => {
             return (
               <div className="add-cake-container">
                 <div className="add-cake-title-container">
-                  <p className="add-cake-title-header"></p>
-                  <input className="add-cake-title-input" />
-                  <p className="dd-cake-title-error"></p>
+                  <p className="add-cake-title-header">Cake Title</p>
+                  <input
+                    className="add-cake-title-input"
+                    value={cakeDetails.name}
+                    name="name"
+                    type="text"
+                    autoComplete="off"
+                    placeholder="Enter the cake name 😋"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="add-cake-description-container">
-                  <p className="add-cake-description-header"></p>
-                  <input className="add-cake-description-input" />
-                  <p className="dd-cake-description-error"></p>
+                  <p className="add-cake-description-header">
+                    Cake Description
+                  </p>
+                  <input
+                    className="add-cake-description-input"
+                    value={cakeDetails.description}
+                    name="description"
+                    type="text"
+                    autoComplete="off"
+                    placeholder="Enter the cake description 📝"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="add-cake-price-container">
-                  <p className="add-cake-price-header"></p>
-                  <input className="add-cake-price-input" />
-                  <p className="dd-cake-price-error"></p>
+                  <p className="add-cake-price-header">Cake Price</p>
+                  <input
+                    className="add-cake-price-input"
+                    value={cakeDetails.price}
+                    name="price"
+                    type="number"
+                    min={99}
+                    autoComplete="off"
+                    placeholder="Enter the cake price 💵"
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="add-cake-image-container">
-                  <p className="add-cake-image-header"></p>
-                  <input className="add-cake-image-input" />
-                  <p className="dd-cake-image-error"></p>
+                  <p className="add-cake-image-header">Cake Image</p>
+                  <input
+                    className="add-cake-image-input"
+                    value={cakeDetails.image}
+                    name="image"
+                    type="url"
+                    autoComplete="off"
+                    placeholder="Provide the cake image url 📸"
+                    onChange={handleInputChange}
+                  />
                 </div>
-                <button>Add Cake</button>
+                <button
+                  className="add-cake-btn"
+                  onClick={() => {
+                    const cakeId = addNewCakeInCakery(cakeDetails);
+                    navigate(`/cake/${cakeId}`);
+                  }}
+                >
+                  Add Cake
+                </button>
               </div>
             );
           }

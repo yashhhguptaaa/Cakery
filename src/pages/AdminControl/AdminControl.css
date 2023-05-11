@@ -116,6 +116,60 @@
   text-align: center;
 }
 
+.add-cake-description-container,
+.add-cake-price-container,
+.add-cake-image-container,
+.add-cake-btn {
+  margin-top: 2rem;
+}
+
+.add-cake-title-header,
+.add-cake-description-header,
+.add-cake-price-header,
+.add-cake-image-header {
+  margin: unset;
+  font-size: 1.25rem;
+  font-weight: 520;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(91, 14, 14);
+}
+
+.add-cake-title-input,
+.add-cake-description-input,
+.add-cake-price-input,
+.add-cake-image-input {
+  border: unset;
+  border-bottom: 0.8px solid black;
+  display: block;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.add-cake-title-input:focus,
+.add-cake-description-input:focus,
+.add-cake-price-input:focus,
+.add-cake-image-input:focus {
+  outline: none;
+}
+
+.add-cake-btn {
+  display: block;
+  margin-inline: auto;
+  width: 50%;
+  font-weight: 800;
+  color: rgb(228, 6, 6);
+  font-size: 1.25rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 1px solid hsla(0, 4%, 21%, 0.2);
+  padding-block: 12px;
+  border-radius: 0.25rem;
+  background-color: rgb(255, 243, 218);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media ((min-width: 768px) and (max-width: 1183px)) {
   .admin-control-container {
     width: 85%;

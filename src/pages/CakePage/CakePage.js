@@ -9,12 +9,12 @@ const CakePage = () => {
     fetchCakeThroughCakeId,
     removeThisCakeFromMyCart,
     addThisCakeToMyCart,
+    setCurrentCakeId,
   } = useContext(CakeryDataContext);
-  const [cakeDetails, setCakeDetails] = useState({});
+  const cakeDetails = fetchCakeThroughCakeId;
   useEffect(() => {
     if (cakeId) {
-      const fetchedCakeDetails = fetchCakeThroughCakeId(cakeId);
-      setCakeDetails(Object.assign({}, fetchedCakeDetails));
+      setCurrentCakeId(cakeId);
     }
   }, [cakeId]);
 

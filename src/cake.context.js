@@ -6,6 +6,7 @@ const CakeryDataContext = createContext();
 const CakeryDataProvider = ({ children }) => {
   const [cakeData, setCakeData] = useState([]);
   const [addToCartItems, setAddToCartItems] = useState([]);
+  const [currentCakeId, setCurrentCakeId] = useState("");
 
   useEffect(() => {
     (async function () {
@@ -22,6 +23,8 @@ const CakeryDataProvider = ({ children }) => {
       ...cakeData,
       Object.assign(cakeDetails, { itemInCart: false, id: cakeId }),
     ]);
+
+    return cakeId;
   };
 
   const deleteCakeProduct = (cakeId) => {
@@ -34,6 +37,7 @@ const CakeryDataProvider = ({ children }) => {
 
   const addToCart = (cakeId) => {
     const filterMyCake = cakeData.filter((cake) => cake.id === cakeId);
+
     setAddToCartItems((addToCartItems) => [...addToCartItems, ...filterMyCake]);
 
     const filteredData = cakeData.map((cake) => {
@@ -42,6 +46,7 @@ const CakeryDataProvider = ({ children }) => {
       }
       return cake;
     });
+
     setCakeData([...filteredData]);
   };
 
@@ -79,7 +84,7 @@ const CakeryDataProvider = ({ children }) => {
 
   const fetchCakeThroughCakeId = (cakeId) => {
     const filterMyCake = cakeData.filter((cake) => cake.id === cakeId);
-    return filterMyCake[0];
+    return filterMyCake.length > 0 ? filterMyCake[0] : {};
   };
 
   return (
@@ -92,7 +97,8 @@ const CakeryDataProvider = ({ children }) => {
         addThisCakeToMyCart: addToCart,
         removeThisCakeFromMyCart: removeFromMyCart,
         clickOnCheckoutButton: checkoutCakeItems,
-        fetchCakeThroughCakeId: fetchCakeThroughCakeId,
+        fetchCakeThroughCakeId: fetchCakeThroughCakeId(currentCakeId),
+        setCurrentCakeId: setCurrentCakeId,
       }}
     >
       {children}
