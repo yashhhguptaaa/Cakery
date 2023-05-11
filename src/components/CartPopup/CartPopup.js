@@ -21,7 +21,11 @@ const CartPopup = ({ clickOnCloseButton }) => {
             <div className="cart-popup-cake" key={cake.id + cake.name}>
               <div className="cart-popup-cake-details">
                 <div className="cart-popup-cake-image-wrapper">
-                  <img className="cart-popup-cake-image" src={cake.image} />
+                  <img
+                    loading="lazy"
+                    className="cart-popup-cake-image"
+                    src={cake.image}
+                  />
                 </div>
                 <p className="cart-popup-cake-title">{cake.name} </p>
                 <p>~</p>

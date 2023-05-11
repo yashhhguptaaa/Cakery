@@ -28,7 +28,11 @@ const CakeDirectory = () => {
                   onClick={() => navigate(`/cake/${cake.id}`)}
                 >
                   <div className="cake-image-wrapper">
-                    <img src={cake.image} className="cake-image" />
+                    <img
+                      loading="lazy"
+                      src={cake.image}
+                      className="cake-image"
+                    />
                   </div>
                   <p className="cake-title">{cake.name}</p>
                   <p className="cake-price">₹ {cake.price}</p>

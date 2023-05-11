@@ -25,7 +25,11 @@ const CakePage = () => {
         <div className="cake-page-container">
           <div className="cake-page-details">
             <div className="cake-page-image-container">
-              <img src={cakeDetails.image} className="cake-page-image" />
+              <img
+                loading="lazy"
+                src={cakeDetails.image}
+                className="cake-page-image"
+              />
             </div>
             <p className="cake-page-title">{cakeDetails.name}</p>
             <p className="cake-page-description">{cakeDetails.description}</p>

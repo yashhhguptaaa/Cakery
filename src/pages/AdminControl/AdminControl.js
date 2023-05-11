@@ -62,6 +62,7 @@ const AdminControl = () => {
                         <div className="all-cakes-cake-details">
                           <div className="all-cakes-cake-image-wrapper">
                             <img
+                              loading="lazy"
                               className="all-cakes-cake-image"
                               src={cake.image}
                             />
