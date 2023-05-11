@@ -1,5 +1,6 @@
 .App {
   padding: unset;
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

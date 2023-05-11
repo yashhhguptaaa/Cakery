@@ -15,9 +15,12 @@ const CakeryDataProvider = ({ children }) => {
   }, []);
 
   const addNewCakeProduct = (cakeDetails) => {
+    const cakeId = String(
+      cakeDetails.name.split(" ").join("") + (cakeData.length + 1)
+    );
     setCakeData((cakeData) => [
       ...cakeData,
-      Object.assign(cakeDetails, { itemInCart: false }),
+      Object.assign(cakeDetails, { itemInCart: false, id: cakeId }),
     ]);
   };
 
@@ -25,7 +28,8 @@ const CakeryDataProvider = ({ children }) => {
     const filteredData = cakeData.filter((cake) => cake.id !== cakeId);
     setCakeData([...filteredData]);
 
-    removeFromMyCart(cakeId);
+    const filterMyCake = addToCartItems.filter((cake) => cake.id !== cakeId);
+    setAddToCartItems([...filterMyCake]);
   };
 
   const addToCart = (cakeId) => {
@@ -72,6 +76,7 @@ const CakeryDataProvider = ({ children }) => {
     );
     setCakeData([...filteredData]);
   };
+
   const fetchCakeThroughCakeId = (cakeId) => {
     const filterMyCake = cakeData.filter((cake) => cake.id === cakeId);
     return filterMyCake[0];

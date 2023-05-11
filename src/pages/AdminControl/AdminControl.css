@@ -1,0 +1,129 @@
+.admin-control-container {
+  width: 70%;
+  margin-inline: auto;
+  margin-top: 8rem;
+}
+
+.admin-control-columns {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-control-all-cakes,
+.admin-control-add-cake {
+  width: 48%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0.5px solid rgb(119, 118, 118);
+  padding-block: 2rem;
+  cursor: pointer;
+}
+
+.admin-control-all-cakes {
+  border-right: unset;
+  border-top-left-radius: 1rem;
+}
+
+.admin-control-add-cake {
+  border-top-right-radius: 1rem;
+}
+
+.selected-column {
+  background-color: rgb(255, 243, 218);
+  font-weight: 600;
+}
+
+.all-cakes-container,
+.add-cake-container {
+  width: 96%;
+  margin-inline: auto;
+}
+
+.all-cakes-container {
+  max-height: 450px;
+  overflow: auto;
+  padding: 0.25rem;
+}
+
+.all-cakes-container::-webkit-scrollbar {
+  display: none;
+}
+
+.all-cakes-cake-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 0.5px solid rgb(119, 118, 118);
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.all-cakes-cake-body:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 243, 218);
+}
+
+.all-cakes-cake-details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.all-cakes-cake-image {
+  height: 60px;
+  width: 60px;
+  border-radius: 0.5rem;
+}
+
+.all-cakes-cake-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.all-cakes-cake-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.all-cakes-delete-icon-wrapper {
+  cursor: pointer;
+}
+.all-cakes-delete-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.all-data-deleted-emoji {
+  width: 180px;
+  height: 180px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.all-cakes-total-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+@media ((min-width: 768px) and (max-width: 1183px)) {
+  .admin-control-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-control-container {
+    width: 90%;
+  }
+}
