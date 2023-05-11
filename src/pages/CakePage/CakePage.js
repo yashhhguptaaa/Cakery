@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CakeryDataContext } from "../../cake.context";
+import Loader from "../../components/Loader";
 import "./CakePage.css";
 
 const CakePage = () => {
@@ -43,7 +44,7 @@ const CakePage = () => {
           </div>
         </div>
       ) : (
-        <div>Loading...</div>
+        <Loader />
       )}
     </>
   );

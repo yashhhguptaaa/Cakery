@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import Loader from "./components/Loader";
 import "./App.css";
 
 const CakeDirectory = lazy(() => import("./pages/CakeDirectory"));
@@ -12,7 +13,13 @@ function App() {
     <div className="App">
       <Router>
         <Layout />
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense
+          fallback={
+            <span>
+              <Loader />
+            </span>
+          }
+        >
           <Routes>
             <Route path="/" element={<CakeDirectory />} />
             <Route path="/admin" element={<AdminControl />} />
